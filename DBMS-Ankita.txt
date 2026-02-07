@@ -1,0 +1,413 @@
+1.
+create table Ankita12(
+stu_id int not null primary key,
+Name varchar(30),
+Branch varchar(10),
+City varchar(20)
+);
+
+insert into Ankita12 values (101, 'Ankita', 'CSE', 'Lucknow');
+insert into Ankita12 values (102, 'Rekha', 'ME', 'Lucknow');
+insert into Ankita12 values (103, 'Sruti', 'EE', 'Lucknow');
+insert into Ankita12 values (104, 'Payal', 'CSE', 'Lucknow');
+insert into Ankita12 values (105, 'Riya', 'CSE', 'Lucknow');
+insert into Ankita12 values (106, 'Sikha', 'EE', 'Lucknow');
+insert into Ankita12 values (107, 'Aditi', 'ME', 'Lucknow');
+insert into Ankita12 values (108, 'Akanksha', 'ME', 'Lucknow');
+insert into Ankita12 values (109, 'Amrita', 'CSE', 'Lucknow');
+insert into Ankita12 values (110, 'Ayushi', 'CE', 'Lucknow');
+insert into Ankita12 values (111, 'Radha', 'CE', 'Lucknow');
+
+
+select * from Ankita12;
+
++--------+----------+--------+---------+
+| stu_id | Name     | Branch | City    |
++--------+----------+--------+---------+
+|    101 | Ankita   | CSE    | Lucknow |
+|    102 | Rekha    | ME     | Lucknow |
+|    103 | Sruti    | EE     | Lucknow |
+|    104 | Payal    | CSE    | Lucknow |
+|    105 | Riya     | CSE    | Lucknow |
+|    106 | Sikha    | EE     | Lucknow |
+|    107 | Aditi    | ME     | Lucknow |
+|    108 | Akanksha | ME     | Lucknow |
+|    109 | Amrita   | CSE    | Lucknow |
+|    110 | Ayushi   | CE     | Lucknow |
+|    111 | Radha    | CE     | Lucknow |
++--------+----------+--------+---------+
+
+select name from Ankita12;
++----------+
+| name     |
++----------+
+| Ankita   |
+| Rekha    |
+| Sruti    |
+| Payal    |
+| Riya     |
+| Sikha    |
+| Aditi    |
+| Akanksha |
+| Amrita   |
+| Ayushi   |
+| Radha    |
++----------+
+
+select Branch from Ankita12;
++--------+
+| Branch |
++--------+
+| CSE    |
+| ME     |
+| EE     |
+| CSE    |
+| CSE    |
+| EE     |
+| ME     |
+| ME     |
+| CSE    |
+| CE     |
+| CE     |
++--------+
+  2. 
+
+create table college(
+S_id int not null primary key,
+Name varchar(30),
+age INT not null,
+city varchar(20)
+);
+
+insert into college values (1, 'Shivani', 24, 'Lucknow');
+insert into college values (2, 'Meghna', 34, 'Delhi');
+insert into college values (3, 'Siya', 26, 'Patna');
+insert into college values (4, 'Radhika', 27, 'Bhopal');
+insert into college values (5, 'Ananya', 30, 'Darbhanga');
+insert into college values (6, 'Ayushi', 28, 'Banaras');
+insert into college values (7, 'Abhinav', 29, 'Lucknow');
+insert into college values (8, 'Kishu', 25, 'Mumbai');
+insert into college values (9, 'Prince', 31, 'Ayodhya');
+insert into college values (10, 'Neha', 21, 'Delhi');
+insert into college values (11, 'Lucky', 22, 'Mumbai');
+
+select * from college;
+------+---------+-----+-----------+
+| S_id | Name    | age | city      |
++------+---------+-----+-----------+
+|    1 | Shivani |  24 | Lucknow   |
+|    2 | Meghna  |  34 | Delhi     |
+|    3 | Siya    |  26 | Patna     |
+|    4 | Radhika |  27 | Bhopal    |
+|    5 | Ananya  |  30 | Darbhanga |
+|    6 | Ayushi  |  28 | Banaras   |
+|    7 | Abhinav |  29 | Lucknow   |
+|    8 | Kishu   |  25 | Mumbai    |
+|    9 | Prince  |  31 | Ayodhya   |
+|   10 | Neha    |  21 | Delhi     |
+|   11 | Lucky   |  22 | Mumbai    |
++------+---------+-----+-----------+
+
+Alter table college
+Add column marks int;
+select * from college;
+------+---------+-----+-----------+-------+
+| S_id | Name    | age | city      | marks |
++------+---------+-----+-----------+-------+
+|    1 | Shivani |  24 | Lucknow   |  NULL |
+|    2 | Meghna  |  34 | Delhi     |  NULL |
+|    3 | Siya    |  26 | Patna     |  NULL |
+|    4 | Radhika |  27 | Bhopal    |  NULL |
+|    5 | Ananya  |  30 | Darbhanga |  NULL |
+|    6 | Ayushi  |  28 | Banaras   |  NULL |
+|    7 | Abhinav |  29 | Lucknow   |  NULL |
+|    8 | Kishu   |  25 | Mumbai    |  NULL |
+|    9 | Prince  |  31 | Ayodhya   |  NULL |
+|   10 | Neha    |  21 | Delhi     |  NULL |
+|   11 | Lucky   |  22 | Mumbai    |  NULL |
++------+---------+-----+-----------+-------+
+
+Update college
+set marks= 60
+where S_id= 1;
+Update college
+set marks= 70
+where S_id= 2;
+Update college
+set marks= 80
+where S_id= 3;
+Update college
+set marks= 90
+where S_id= 4;
+Update college
+set marks= 67
+where S_id= 5;
+Update college
+set marks= 76
+where S_id= 6;
+Update college
+set marks= 84
+where S_id= 7;
+Update college
+set marks= 65
+where S_id= 8;
+Update college
+set marks= 56
+where S_id= 9;
+Update college
+set marks= 85
+where S_id= 10;
+Update college
+set marks= 95
+where S_id= 11;
+select * from college;
++------+---------+-----+-----------+-------+
+| S_id | Name    | age | city      | marks |
++------+---------+-----+-----------+-------+
+|    1 | Shivani |  24 | Lucknow   |    60 |
+|    2 | Meghna  |  34 | Delhi     |    70 |
+|    3 | Siya    |  26 | Patna     |    80 |
+|    4 | Radhika |  27 | Bhopal    |    90 |
+|    5 | Ananya  |  30 | Darbhanga |    67 |
+|    6 | Ayushi  |  28 | Banaras   |    76 |
+|    7 | Abhinav |  29 | Lucknow   |    84 |
+|    8 | Kishu   |  25 | Mumbai    |    65 |
+|    9 | Prince  |  31 | Ayodhya   |    56 |
+|   10 | Neha    |  21 | Delhi     |    85 |
+|   11 | Lucky   |  22 | Mumbai    |    95 |
++------+---------+-----+-----------+-------+
+
+delete from college 
+where marks>80;
+select * from college;
++------+---------+-----+-----------+-------+
+| S_id | Name    | age | city      | marks |
++------+---------+-----+-----------+-------+
+|    1 | Shivani |  24 | Lucknow   |    60 |
+|    2 | Meghna  |  34 | Delhi     |    70 |
+|    3 | Siya    |  26 | Patna     |    80 |
+|    5 | Ananya  |  30 | Darbhanga |    67 |
+|    6 | Ayushi  |  28 | Banaras   |    76 |
+|    8 | Kishu   |  25 | Mumbai    |    65 |
+|    9 | Prince  |  31 | Ayodhya   |    56 |
++------+---------+-----+-----------+-------+
+
+select sum(marks) from college;
+| sum(marks) |
++------------+
+|        474 |
++------------+
+
+select avg(marks) from college;
++------------+
+| avg(marks) |
++------------+
+|    67.7143 |
++------------+
+
+select count(marks) from college;
++--------------+
+| count(marks) |
++--------------+
+|            7 |
++--------------+
+
+select max(marks) from college;
++------------+
+| max(marks) |
++------------+
+|         80 |
++------------+
+
+select min(marks) from college;
++------------+
+| min(marks) |
++------------+
+|         56 |
++------------+
+
+select * from college order by age;
++------+---------+-----+-----------+-------+
+| S_id | Name    | age | city      | marks |
++------+---------+-----+-----------+-------+
+|    1 | Shivani |  24 | Lucknow   |    60 |
+|    8 | Kishu   |  25 | Mumbai    |    65 |
+|    3 | Siya    |  26 | Patna     |    80 |
+|    6 | Ayushi  |  28 | Banaras   |    76 |
+|    5 | Ananya  |  30 | Darbhanga |    67 |
+|    9 | Prince  |  31 | Ayodhya   |    56 |
+|    2 | Meghna  |  34 | Delhi     |    70 |
++------+---------+-----+-----------+-------+
+
+alter table college drop column marks;
+select * from college;
+
++------+---------+-----+-----------+
+| S_id | Name    | age | city      |
++------+---------+-----+-----------+
+|    1 | Shivani |  24 | Lucknow   |
+|    2 | Meghna  |  34 | Delhi     |
+|    3 | Siya    |  26 | Patna     |
+|    5 | Ananya  |  30 | Darbhanga |
+|    6 | Ayushi  |  28 | Banaras   |
+|    8 | Kishu   |  25 | Mumbai    |
+|    9 | Prince  |  31 | Ayodhya   |
++------+---------+-----+-----------+
+
+alter table college rename to school;
+select * from school;
++------+---------+-----+-----------+
+| S_id | Name    | age | city      |
++------+---------+-----+-----------+
+|    1 | Shivani |  24 | Lucknow   |
+|    2 | Meghna  |  34 | Delhi     |
+|    3 | Siya    |  26 | Patna     |
+|    5 | Ananya  |  30 | Darbhanga |
+|    6 | Ayushi  |  28 | Banaras   |
+|    8 | Kishu   |  25 | Mumbai    |
+|    9 | Prince  |  31 | Ayodhya   |
++------+---------+-----+-----------+
+
+3.
+create table employee(
+emp_id int not null primary key,
+Name varchar(30),
+age INT not null,
+city varchar(20)
+);
+
+insert into employee values (1, 'Rekha', 24, 'Lucknow');
+insert into employee values (2, 'Meghna', 34, 'Delhi');
+insert into employee values (3, 'Sikha', 26, 'Patna');
+insert into employee values (4, 'Radhika', 27, 'Bhopal');
+insert into employee values (5, 'Aditi', 30, 'Darbhanga');
+insert into employee values (6, 'Ayushi', 28, 'Banaras');
+insert into employee values (7, 'Abhinav', 29, 'Lucknow');
+insert into employee values (8, 'Kishu', 25, 'Mumbai');
+insert into employee values (9, 'Ayush', 31, 'Ayodhya');
+insert into employee values (10, 'Anisha', 21, 'Delhi');
+insert into employee values (11, 'Nikhil', 22, 'Mumbai');
+
+select * from employee;
+--------+---------+-----+-----------+
+| emp_id | Name    | age | city      |
++--------+---------+-----+-----------+
+|      1 | Rekha   |  24 | Lucknow   |
+|      2 | Meghna  |  34 | Delhi     |
+|      3 | Sikha   |  26 | Patna     |
+|      4 | Radhika |  27 | Bhopal    |
+|      5 | Aditi   |  30 | Darbhanga |
+|      6 | Ayushi  |  28 | Banaras   |
+|      7 | Abhinav |  29 | Lucknow   |
+|      8 | Kishu   |  25 | Mumbai    |
+|      9 | Ayush   |  31 | Ayodhya   |
+|     10 | Anisha  |  21 | Delhi     |
+|     11 | Nikhil  |  22 | Mumbai    |
++--------+---------+-----+-----------+
+
+Alter table employee
+Add column salary int not null;
+select * from employee;
++--------+---------+-----+-----------+--------+
+| emp_id | Name    | age | city      | salary |
++--------+---------+-----+-----------+--------+
+|      1 | Rekha   |  24 | Lucknow   |      0 |
+|      2 | Meghna  |  34 | Delhi     |      0 |
+|      3 | Sikha   |  26 | Patna     |      0 |
+|      4 | Radhika |  27 | Bhopal    |      0 |
+|      5 | Aditi   |  30 | Darbhanga |      0 |
+|      6 | Ayushi  |  28 | Banaras   |      0 |
+|      7 | Abhinav |  29 | Lucknow   |      0 |
+|      8 | Kishu   |  25 | Mumbai    |      0 |
+|      9 | Ayush   |  31 | Ayodhya   |      0 |
+|     10 | Anisha  |  21 | Delhi     |      0 |
+|     11 | Nikhil  |  22 | Mumbai    |      0 |
++--------+---------+-----+-----------+--------+
+
+Update employee
+set salary= 6000
+where emp_id= 1;
+Update employee
+set salary= 7000
+where emp_id= 2;
+Update employee
+set salary= 8000
+where emp_id= 3;
+Update employee
+set salary= 9000
+where emp_id= 4;
+Update employee
+set salary= 67000
+where emp_id= 5;
+Update employee
+set salary= 76000
+where emp_id= 6;
+Update employee
+set salary= 84000
+where emp_id= 7;
+Update employee
+set salary= 65000
+where emp_id= 8;
+Update employee
+set salary= 56000
+where emp_id= 9;
+Update employee
+set salary= 85000
+where emp_id= 10;
+Update employee
+set salary= 95000
+where emp_id= 11;
+select * from employee;
++--------+---------+-----+-----------+--------+
+| emp_id | Name    | age | city      | salary |
++--------+---------+-----+-----------+--------+
+|      1 | Rekha   |  24 | Lucknow   |   6000 |
+|      2 | Meghna  |  34 | Delhi     |   7000 |
+|      3 | Sikha   |  26 | Patna     |   8000 |
+|      4 | Radhika |  27 | Bhopal    |   9000 |
+|      5 | Aditi   |  30 | Darbhanga |  67000 |
+|      6 | Ayushi  |  28 | Banaras   |  76000 |
+|      7 | Abhinav |  29 | Lucknow   |  84000 |
+|      8 | Kishu   |  25 | Mumbai    |  65000 |
+|      9 | Ayush   |  31 | Ayodhya   |  56000 |
+|     10 | Anisha  |  21 | Delhi     |  85000 |
+|     11 | Nikhil  |  22 | Mumbai    |  95000 |
++--------+---------+-----+-----------+--------+
+
+alter table employee drop column city;
+select * from employee;
++--------+---------+-----+--------+
+| emp_id | Name    | age | salary |
++--------+---------+-----+--------+
+|      1 | Rekha   |  24 |   6000 |
+|      2 | Meghna  |  34 |   7000 |
+|      3 | Sikha   |  26 |   8000 |
+|      4 | Radhika |  27 |   9000 |
+|      5 | Aditi   |  30 |  67000 |
+|      6 | Ayushi  |  28 |  76000 |
+|      7 | Abhinav |  29 |  84000 |
+|      8 | Kishu   |  25 |  65000 |
+|      9 | Ayush   |  31 |  56000 |
+|     10 | Anisha  |  21 |  85000 |
+|     11 | Nikhil  |  22 |  95000 |
++--------+---------+-----+--------+
+
+alter table employee  rename to school;
+select * from school;
++--------+---------+-----+--------+
+| emp_id | Name    | age | salary |
++--------+---------+-----+--------+
+|      1 | Rekha   |  24 |   6000 |
+|      2 | Meghna  |  34 |   7000 |
+|      3 | Sikha   |  26 |   8000 |
+|      4 | Radhika |  27 |   9000 |
+|      5 | Aditi   |  30 |  67000 |
+|      6 | Ayushi  |  28 |  76000 |
+|      7 | Abhinav |  29 |  84000 |
+|      8 | Kishu   |  25 |  65000 |
+|      9 | Ayush   |  31 |  56000 |
+|     10 | Anisha  |  21 |  85000 |
+|     11 | Nikhil  |  22 |  95000 |
++--------+---------+-----+--------+
+
+
